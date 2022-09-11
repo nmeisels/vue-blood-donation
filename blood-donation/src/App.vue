@@ -1,5 +1,4 @@
 <template>
-  <button @click="deselectRows">deselect rows</button>
   <ag-grid-vue
       class="ag-theme-alpine"
       style="height: 500px"
@@ -35,7 +34,7 @@ export default {
       ],
     });
     const columnDefs = reactive({
-      value: [{ field: "DateDonation" }, { field: "FromHour" }, { field: "ToHour" }, { field: "Name" }, { field: "City" }, { field: "Street" }],
+      value: [{ field: "DateDonation" }, { field: "FromHour" }, { field: "ToHour" }, { field: "Name" }, { field: "City" }, { field: "Street" }, {field: "NumHouse"}],
     });
     const defaultColDef = {
       sortable: true,
@@ -54,9 +53,6 @@ export default {
       cellWasClicked: (event) => {
         console.log("cell was clicked", event);
       },
-      deselectRows: () =>{
-        gridApi.value.deselectAll()
-      }
     };
   },
 };
