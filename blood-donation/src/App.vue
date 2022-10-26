@@ -67,7 +67,8 @@ export default {
       filter: true,
       flex: 1,
       filterParams: {buttons: ["clear"]},
-      floatingFilter: true
+      floatingFilter: true,
+      resizable: true
     });
     onMounted(() => {
       fetch("https://d6ebtk.deta.dev/api/get-data", {})
