@@ -27,6 +27,7 @@ export default {
     const gridApi = ref(null);
     const onGridReady = (params) => {
       gridApi.value = params.api;
+      gridApi.value.sizeColumnsToFit();
     };
     const rowData = reactive({
       value: [
