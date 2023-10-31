@@ -1,3 +1,5 @@
+from typing import Dict, List
+
 import requests
 import json
 import uvicorn
@@ -25,7 +27,7 @@ def read_root():
 
 
 @app.get("/api/get-data")
-def get_data() -> dict:
+def get_data() -> List[Dict[str, str]]:
     headers = CaseInsensitiveDict()
     headers["authority"] = "www.mdais.org"
     headers["sec-ch-ua"] = """" Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99" """

@@ -1,0 +1,10 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: blood-donation
+    src: ./blood-donation/src/backend/
+    engine: python3.9
+    primary: true
+    run: uvicorn main:app
+    public_routes:
+      - "/*"
