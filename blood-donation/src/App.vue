@@ -72,7 +72,7 @@ export default {
       resizable: true
     });
     onMounted(() => {
-      fetch("https://vueblood-1-c9171200.deta.app/api/get-data", {})
+      fetch("https://vueblood-1-c9171200.deta.app/api/get-data/", {})
       .then((result) => result.json())
       .then((remoteRowData) => (rowData.value = remoteRowData));
     });
