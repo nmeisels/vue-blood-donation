@@ -14,10 +14,11 @@
 </template>
 
 <script>
-import { AgGridVue } from "ag-grid-vue3";
-import { reactive, onMounted, ref } from "vue";
+import {AgGridVue} from "ag-grid-vue3";
+import {onMounted, reactive, ref} from "vue";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
 export default {
   name: "App",
   components: {
@@ -71,10 +72,16 @@ export default {
       floatingFilter: true,
       resizable: true
     });
-    onMounted(() => {
-      fetch("https://vueblood-1-c9171200.deta.app/api/get-data/", {})
-      .then((result) => result.json())
-      .then((remoteRowData) => (rowData.value = remoteRowData));
+    onMounted(async () => {
+      try {
+        const response = await fetch("https://vueblood-1-c9171200.deta.app/api/get-data/", {});
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        rowData.value = await response.json();
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     });
     return {
       onGridReady,
