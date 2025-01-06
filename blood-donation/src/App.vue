@@ -74,7 +74,7 @@ export default {
     });
     onMounted(async () => {
       try {
-        const response = await fetch("https://blood-ogmc4rkqv-nathans-projects-46bd06c7.vercel.app/api/get-data", {});
+        const response = await fetch("https://blood-f7xcfrsaq-nathans-projects-46bd06c7.vercel.app/api/get-data", {});
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
