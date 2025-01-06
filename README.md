@@ -10,7 +10,7 @@ For these reasons I have developed this project that gives you a site with a gri
 I was inspired by [park_n_recs](https://github.com/NivRichter/park_n_recs) which was later integrated into the Israel Nature and Parks Authority website. If anyone has connections with Mada website please contact me :) 
 
 # Backend
-[FastAPI](https://fastapi.tiangolo.com/) server deployed using [deta](https://www.deta.sh/)
+[FastAPI](https://fastapi.tiangolo.com/) server deployed using [vercel](https://vercel.com/)
 
 (I had issues with [cors](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) and this was my way of bypassing it)
 
@@ -22,7 +22,7 @@ This is a fun side project. I'm not a frontend developer. Any feedback how to im
 
 # Sources
 - [Vue.js Data Grid Getting Started With AG Grid](https://www.youtube.com/watch?v=V14w_NFuZB4&list=PLsZlhayVgqNz5iC0wFQDgixcAepFyrWbP&index=1&ab_channel=ag-Grid)
-- [Deploy FastAPI on Deta](https://fastapi.tiangolo.com/deployment/deta/)
+- [Deploy FastAPI on vercel](https://www.youtube.com/watch?v=8R-cetf_sZ4&ab_channel=EricRoby)
 - [Deploying Vue Apps to Github Pages](https://medium.com/swlh/deploy-vue-app-to-github-pages-2ada48d7397e)
 
 # Future ideas
